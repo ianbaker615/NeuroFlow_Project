@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      <p>
+        Search:
+        <input ng-model="$ctrl.query" />
+      </p>
+
+      <p>
+        Sort by:
+        <select ng-model="$ctrl.orderProp">
+          <option value="label">Label</option>
+          <option value="category">Category</option>
+        </select>
+      </p>
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <ul class="tracks">
+        <li ng-repeat="track in $ctrl.tracks | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+          <span>{{track.label}}</span>
+          <p>{{track.category}}</p>
+          <audio controls>
+            <source src="{{track.url}}" type="audio/mpeg">
+          </audio>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
