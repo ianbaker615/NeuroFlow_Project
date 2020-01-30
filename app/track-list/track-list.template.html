@@ -22,8 +22,16 @@
 
       <ul class="tracks">
         <li ng-repeat="track in $ctrl.tracks | filter:$ctrl.query | orderBy:$ctrl.orderProp">
-          <span>{{track.label}}</span>
-          <p>{{track.category}}</p>
+          <div>{{track.label}}</div>
+
+          Details: <input type="checkbox" ng-model="checked"><br/>
+          <div class="check-element animate-show-hide" ng-show="checked">
+            <p>{{track.description}}</p>
+            <p>Speaker: {{track.speaker}}</p>
+          </div>
+
+
+          <div>{{track.category}}</div>
           <audio controls>
             <source src="{{track.url}}" type="audio/mpeg">
           </audio>

@@ -18,7 +18,7 @@ describe('trackList', function() {
     });
 
     it('should set a default value for the `orderProp` model', function() {
-      expect(ctrl.orderProp).toBe('lable');
+      expect(ctrl.orderProp).toBe('label');
     });
 
   });
