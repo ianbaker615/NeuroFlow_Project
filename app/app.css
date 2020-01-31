@@ -1,5 +1,21 @@
 body {
   padding-top: 20px;
+  background-color: rgb(227, 244, 255);
+}
+
+audio { 
+  width: 250px; 
+  box-shadow: 5px 5px 20px rgba(0,0, 0, 0.4);
+  border-radius: 90px;
+  transform: scale(1.05);
+  margin: 5px;
+}
+
+.search-bar { 
+  width: 150px; 
+  border-radius: 90px;
+  margin: 5px;
+  padding:5px;
 }
 
 .animate-show-hide.ng-hide {
@@ -15,4 +31,7 @@ body {
   opacity: 1;
   padding: 10px;
 }
+
+
+
 

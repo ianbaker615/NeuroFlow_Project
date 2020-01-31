@@ -130,5 +130,18 @@ angular.
       ];
 
       this.orderProp = 'label';
+
+      const validTracks = this.tracks.filter(validTrack => {
+        //This is what I would do if there was no CORS 
+        //error due to me developing on localhost
+
+        // fetch(validTrack.url)
+        //   .then((response) => {
+        //     return validTrack;
+        //   })
+        //   .catch((error) => {
+        //     console.error('Error:', error);
+        //   });
+      });
     }
   });
